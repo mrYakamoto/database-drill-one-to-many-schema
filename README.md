@@ -2,6 +2,9 @@
  
 ##Learning Competencies 
 
+* Design database schema from problem data
+* Model a one-to-many relationship in a relational database
+
 ##Summary 
 
  A database with a single table is not that useful &mdash; a database of any complexity will have more than one kind of "thing" it wants to keep track of.
@@ -30,21 +33,17 @@ The **convention** is that the **foreign key** (<code>user_id</code>, here) cont
 
 One user has many orders, but an order has exactly one user.
 
-<!--
-**Resource:** Here's a [video](http://shereef.wistia.com/medias/fd684c61cb) of Jesse going over Schema Design on July 3, 2012.  Contact staff if you haven't received the login and password in your email.  **Spoiler Alert:** this will show you the schemas for some of the challenges!
--->
 
-## Objectives
+##Releases
 
-### Design the schema
+###Release 0 Design the schema
 
 Link the <code>users</code> and <code>orders</code> tables together by clicking 'connect foreign key', pointing the <code>user_id</code> field in the <code>orders</code> table to the <code>id</code> field in the <code>users</code> table.
 
-Use [SQL Designer](/sql.html) to create your schema.  When you are done, save the XML of your schema and copy it into the gist. Then, take a screenshot of your final schema design, and upload it using a free image-upload service like [Min.us](http://minus.com).  Paste the URL of the screenshot into your gist (before your XML code). 
+Use [SQL Designer][] to create your schema.  When you are done, save the XML of your schema and copy it to the source file `one_to_many_schema.md`. Then, take a screenshot of your final schema design, and upload it using a free image-upload service like [Min.us](http://minus.com).  Paste the URL of the screenshot into your file (before your XML code). 
 
-##Releases
-###Release 0 
-
-##Optimize Your Learning 
+<!-- ##Optimize Your Learning  -->
 
 ##Resources
+
+* [SQL Designer](https://socrates.devbootcamp.com//sql.html)
