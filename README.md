@@ -40,7 +40,7 @@ One user has many orders, but an order has exactly one user.
 
 Link the <code>users</code> and <code>orders</code> tables together by clicking 'connect foreign key', pointing the <code>user_id</code> field in the <code>orders</code> table to the <code>id</code> field in the <code>users</code> table.
 
-Use [SQL Designer][] to create your schema.  When you are done, save the XML of your schema and copy it to the source file `one_to_many_schema.md`. Then, take a screenshot of your final schema design, and upload it using a free image-upload service like [Min.us](http://minus.com).  Paste the URL of the screenshot into your file (before your XML code). 
+When you are done, take a screenshot of your schema, commit it, and issue a pull request.
 
 <!-- ##Optimize Your Learning  -->
 
