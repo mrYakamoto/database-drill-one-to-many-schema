@@ -38,9 +38,11 @@ One user has many orders, but an order has exactly one user.
 
 ###Release 0 Design the schema
 
+Use [SQL Designer](https://socrates.devbootcamp.com//sql.html) to create your schema. 
+
 Link the <code>users</code> and <code>orders</code> tables together by clicking 'connect foreign key', pointing the <code>user_id</code> field in the <code>orders</code> table to the <code>id</code> field in the <code>users</code> table.
 
-When you are done, take a screenshot of your schema, commit it, and issue a pull request.
+When you are done, take a screenshot of your final schema design, and commit it.
 
 <!-- ##Optimize Your Learning  -->
 
