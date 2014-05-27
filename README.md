@@ -48,4 +48,4 @@ When you are done, take a screenshot of your final schema design, and commit it.
 
 ##Resources
 
-* [SQL Designer](https://socrates.devbootcamp.com//sql.html)
+* [SQL Designer](https://socrates.devbootcamp.com/sql.html)
