@@ -22,18 +22,18 @@ When relating two tables with each other, we'll match data from the primary key 
 
 The foreign key belongs on the table for the *many* side of the relationship.  In our example, we want a user to have many orders.  So, orders is the many side of this relationship.  Therefore, the orders table needs a foreign key that will point to the specific user who made the order.  By convention, this foreign key field is named *user_id*.
 
-##Releases
 
-###Release 0 Design the schema
+## Releases
+### Pre-release:  Read and Run the Movie Showtime Script
+We have a small script that displays movie showtimes for each screen in a few movie theaters (see `runner.rb`).  Take a look through the code base.  See which classes are present and how they relate to each other.  We can proceed to the next release when we feel comfortable that we understand the how the script works and how the different classes relate to each other.
 
-Use [SQL Designer](https://socrates.devbootcamp.com/sql.html) to create your schema. 
 
-Link the <code>users</code> and <code>orders</code> tables together by clicking 'connect foreign key', pointing the <code>user_id</code> field in the <code>orders</code> table to the <code>id</code> field in the <code>users</code> table.
+### Release 0: Design a Database Schema to Support the Program
+The user of this script is interested in expanding it, and we need to design a database schema that will support the application.  In other words, we need to design a database that will store the data that is currently contained within the file `runner.rb`:  which theaters there are, their names, which screens each theater has, etc.
 
-When you are done, take a screenshot of your final schema design, and commit it.
+We should use the [Schema Designer][] to create our schema.  When our schema is complete, take a screenshot of the design and commit it.
 
-<!-- ##Optimize Your Learning  -->
 
 ##Resources
 
-* [SQL Designer](https://socrates.devbootcamp.com/sql.html)
+[Schema Designer]: https://schemadesigner.devbootcamp.com/
