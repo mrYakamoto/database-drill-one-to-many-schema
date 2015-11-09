@@ -1,38 +1,26 @@
-# Database Drill One To Many Schema 
- 
-##Learning Competencies 
+# Schema Design Drill: One-to-many Schema
 
-* Design database schema from problem data
-* Model a one-to-many relationship in a relational database
+## Summary
+A database of any complexity will store data for multiple things.  For example, a classroom database could hold data for people, grades, homework assignments, etc.  For each of these, we would create a separate table:  a table to hold data for people, a table to hold data for grades, etc.
 
-##Summary 
+One of the benefits of relational databases is the ability to associate data in one table to data in another table.  In the classroom example, we would want to associate specific grades with specific students.
 
- A database with a single table is not that useful &mdash; a database of any complexity will have more than one kind of "thing" it wants to keep track of.
-A classroom database, for example, could have separate tables for students, teachers, classes, sections, homework assignments, grades, etc.
+We can associate data in different tables in multiple ways—in other words, define different types of relationships between the tables.  One of these relationships is one-to-many.
 
-These tables are all related to each other through one of three types of **relations**.  One-to-many relations are the easiest to understand.
+One example of a one-to-many relationship is making an online order at, say, Amazon.com.  A user can make many orders, but each order belongs to exactly one user.  Given a user, we would be able to find many orders associated with that particular user.  Conversely, given an order, we would find only one user associated with the order.
 
-An Amazon user has many orders, but an order belongs to exactly one user.  A movie theater has multiple screens, but each screen belongs to only that movie theater.  A street has many houses on it, but a house belongs to only one street.
 
-We design this by having a **foreign key** on the "many" table which stores the **primary key** of the "one" table.  Remember that a table's primary key uniquely identifies a row.  The <code>users</code> and <code>orders</code> table would be designed this way:
+### Primary Keys and Foreign Keys
+![schema design example](readme-assets/schema-example.png)  
+*Figure 1*.  Simplified schema design for users and orders at an e-commerce site.
 
-<pre>
-+------------+        +-------------+
-| users      |        | orders      |
-+------------+        +-------------+
-| id         |&lt;---\   | id          |
-| first_name |     \--| user_id     |
-| last_name  |        | total       |
-| email      |        | address     |
-| created_at |        | created_at  |
-| updated_at |        | updated_at  |
-+------------+        +-------------+
-</pre>
+How do we associate data in one table with data in another?  To start, we give each record in our database a unique identifier, a value that only this one record can have.  We call this unique identifier a *primary key*.  The default is to use an *id* field that contains a unique integer value.
 
-The **convention** is that the **foreign key** (<code>user_id</code>, here) contains the singular version of the foreign table.  Because <tt>user_id</tt> contains an integer that corresponds to a one and only one row in the <code>users</code> table, we see that every order only has one users.  However, there could be two rows in the <code>orders</code> table with the same values in the <code>user_id</code> field.
+In our users-orders e-commerce example, each user would have a unique id.  We can then use these unique identifiers in another table.  In Figure 1, each order keeps track of the user who placed the order in the *user_id* field.  *user_id* is an example of a *foreign key*, a field whose value points to a row of data in another table–in this case, a row in the users table.
 
-One user has many orders, but an order has exactly one user.
+When relating two tables with each other, we'll match data from the primary key in one table with data from the foreign key in the other table.  It's important that the foreign key is created on the right table; otherwise, the relationship between the tables would be reversed.
 
+The foreign key belongs on the table for the *many* side of the relationship.  In our example, we want a user to have many orders.  So, orders is the many side of this relationship.  Therefore, the orders table needs a foreign key that will point to the specific user who made the order.  By convention, this foreign key field is named *user_id*.
 
 ##Releases
 
