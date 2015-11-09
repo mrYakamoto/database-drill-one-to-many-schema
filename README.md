@@ -34,6 +34,7 @@ The user of this script is interested in expanding it, and we need to design a d
 We should use the [Schema Designer][] to create our schema.  When our schema is complete, take a screenshot of the design and commit it.
 
 
-##Resources
+## Conclusion
+We'll be designing databases to support our applications throughout the rest of our time at Dev Bootcamp.  It's critical that we understand how to design databases that allow relating objects of one type to objects of another type.  The one-to-many relationship that we looked at in this challenge is a common relationship type, and it's critical that we understand how to model the relationship in our databases.
 
 [Schema Designer]: https://schemadesigner.devbootcamp.com/
