@@ -1,4 +1,4 @@
-# Schema Design Drill: One-to-many Schema
+# Schema Design: One-to-many Schema
 
 ## Summary
 A database of any complexity will store data for multiple things.  For example, a classroom database could hold data for people, grades, homework assignments, etc.  For each of these, we would create a separate table:  a table to hold data for people, a table to hold data for grades, etc.
