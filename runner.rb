@@ -15,7 +15,7 @@ fallen_timbers = Theater.new(name: 'Fallen Timbers', screens: [fallen_timbers_sc
 
 levis_commons_screen_1 = Screen.new(number: 1)
 levis_commons_screen_2 = Screen.new(number: 2)
-levis_commons = Theater.new(name: 'Fallen Timbers', screens: [levis_commons_screen_1, levis_commons_screen_2])
+levis_commons = Theater.new(name: 'Levis Commons', screens: [levis_commons_screen_1, levis_commons_screen_2])
 
 
 # Add screenings for each screen
